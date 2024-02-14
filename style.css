@@ -11,9 +11,9 @@
    visibility:hidden;
 }
 #card h2 {
-   font-size:3em;
+   font-size:2em;
    margin:0;
-   color:pink;
+   color:rgb(41, 2, 8);
    text-align: center;
 }
 #card p {
@@ -25,7 +25,7 @@
 
 
 .side {
-   background:#eee;
+   background:#1d0f0f;
    height:550px;
    width:400px;
 /*    border:1px solid red; */
@@ -179,7 +179,7 @@ body {
 
 .side.one .fa-heart {
   font-size: 8em;
-  color: red;
+  color: rgb(251, 0, 0);
   animation: pulseHeart 1s ease-in-out infinite alternate;
   cursor: default;
 }
