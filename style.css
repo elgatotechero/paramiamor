@@ -1,21 +1,55 @@
 @import url('https://fonts.googleapis.com/css?family=Sacramento');
 
 #card {
-   height:500px;
-   width:800px;
-   margin:5em auto;
-   position: fixed;
+  height: 500px;
+  width: 800px;
+  margin: 5em auto;
+  position: fixed;
   top: -15px;
-   left: 25%;
-   display:flex;
-   visibility:hidden;
+  left: 25%;
+  display: flex;
+  visibility: hidden;
 }
+
+/* Estilos para dispositivos móviles */
+@media only screen and (max-width: 600px) {
+  #card {
+    width: 90%; /* Reducir el ancho para dispositivos móviles */
+    height: auto; /* Permitir que la altura se ajuste automáticamente */
+    margin: 2em auto; /* Ajustar el margen */
+    position: static; /* Cambiar la posición a estática para que no sea fija */
+    visibility: hidden; 
+    display: flex;
+    top: 50px;
+ 
+  }
+  .side.side.one {
+    display: none; 
+  }
+  #card p {
+    padding-left: 0 !important; /* Eliminar el relleno a la izquierda en dispositivos móviles */
+    padding-right: 0 !important; /* Eliminar el relleno a la derecha en dispositivos móviles */
+    font-size: 1.3em !important;
+  }
+
+  .valentines-day {
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+}
+
+
 #card h2 {
    font-size:2em;
    margin:0;
-   color:rgb(41, 2, 8);
+   color:rgb(26, 8, 11);
    text-align: center;
 }
+
+
 #card p {
    font-size: 1.5em;
    text-align: justify;
@@ -25,10 +59,10 @@
 
 
 .side {
-   background:#1d0f0f;
+   background:#eee;
    height:550px;
    width:400px;
-/*    border:1px solid red; */
+
    padding:10px;
 }
 .side.one {
@@ -36,11 +70,11 @@
    transform:skew(10deg,20deg);
    background:linear-gradient(90deg, #fff, #fff 40%, #ddd);
    display: flex; /* Utiliza flexbox para centrar el corazón verticalmente */
-  justify-content: center; /* Centra horizontalmente el contenido */
-  align-items: center; /* Centra verticalmente el contenido */
-  transform: skew(10deg, 20deg);
-  position: relative;
-  overflow: hidden;
+   justify-content: center; /* Centra horizontalmente el contenido */
+   align-items: center; /* Centra verticalmente el contenido */
+   transform: skew(10deg, 20deg);
+   position: relative;
+   overflow: hidden;
 }
 .side.two {
    transform:skew(10deg,-15deg);
@@ -179,7 +213,7 @@ body {
 
 .side.one .fa-heart {
   font-size: 8em;
-  color: rgb(251, 0, 0);
+  color: red;
   animation: pulseHeart 1s ease-in-out infinite alternate;
   cursor: default;
 }
@@ -192,3 +226,63 @@ body {
      transform: scale(1.2);
   }
 }
+
+
+.made-with-love {
+  position: fixed;
+  left: 0;
+  width: 100%;
+  top: 15PX; /* Cambiado de "bottom: 10px;" a "top: 0;" */
+  text-align: center;
+  font-size: 10px;
+  z-index: 9999;
+  font-family: arial;
+  color: #e06ae0;
+  font-weight: 600;
+}
+.made-with-love i {
+  font-style: normal;
+  font-size: 14px;
+  position: relative;
+  top: 2px;
+}
+.made-with-love a {
+  color: #c74f2b;
+  text-decoration: none;
+
+  
+}
+.made-with-love a:hover {
+  text-decoration: underline;
+}
+.made-with-love .dribble img {
+  max-width: 100%;
+  width: 26px;
+  position: relative;
+  top: -2px;
+  vertical-align: middle;
+}
+
+.made-with-love a {
+  font-weight: bold; /* Añadiendo negrita solo a los enlaces */
+}
+
+/* Estilos para dispositivos móviles */
+@media screen and (max-width: 600px) {
+  #card {
+      width: 90%;
+      max-width: 90%;
+      margin: 2em auto;
+  }
+  
+  .side {
+      width: 90%;
+      max-width: 90%;
+      margin: 0 auto;
+  }
+
+  .text {
+      font-size: 1em; /* Ajuste del tamaño de fuente */
+  }
+}
+
