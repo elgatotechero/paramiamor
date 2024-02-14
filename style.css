@@ -12,16 +12,14 @@
 }
 
 /* Estilos para dispositivos móviles */
-@media only screen and (max-width: 600px) {
+@media screen and (max-width: 600px) {
   #card {
     width: 90%; /* Reducir el ancho para dispositivos móviles */
-    height: auto; /* Permitir que la altura se ajuste automáticamente */
+    max-width: 90%; /* Establecer un ancho máximo */
     margin: 2em auto; /* Ajustar el margen */
-    position: static; /* Cambiar la posición a estática para que no sea fija */
-    visibility: hidden; 
-    display: flex;
-    top: 50px;
- 
+    position: relative; /* Cambiar la posición a relativa */
+    top: 0; /* Ajustar la posición vertical */
+    left: 0; /* Ajustar la posición horizontal */
   }
   .side.side.one {
     display: none; 
@@ -43,7 +41,7 @@
 
 
 #card h2 {
-   font-size:1.3em;
+   font-size:1.5em;
    margin:0;
    color:rgb(0, 0, 0);
    text-align: center;
